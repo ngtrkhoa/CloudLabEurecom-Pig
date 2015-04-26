@@ -204,16 +204,22 @@ MapReduce:
 
 ## Use-case 2. Working with an Airline dataset
 [Airline Data Analysis with Pig](https://github.com/michiard/CLOUDS-LAB/blob/master/labs/pig-lab/airtraffic-analysis/README.md)
+
 ###Query 1: Top 20 airports by total volume of flights
 - Script: scripts/airtraffic-analysis/ex1.pig
+
 ###Query 2: Carrier Popularity
 - Script: scripts/airtraffic-analysis/ex2.pig
+
 ###Query 3: Proportion of Flights Delayed
 - Script: scripts/airtraffic-analysis/ex3.pig
+
 ###Query 4: Carrier Delays
 - Script: scripts/airtraffic-analysis/ex4.pig
+
 ###Query 5: Busy Routes
 - Script: scripts/airtraffic-analysis/ex5.pig
+
 ###Optional data analysis tasks
 - When is the best time of day/day of week/time of year to fly to minimize delays?
 - Do older planes suffer more delays?
