@@ -9,7 +9,7 @@ This is the solution for the [Hadoop Pig Laboratory at Eurecom](https://github.c
 
 ## Warm up exercises
 ### Exercise 1. Word Count
-#####Script: scripts/warm-up/ex1
+#####Script: scripts/warm-up/word-count.pig
 
 #####Q1: Compare between Pig and Hadoop, including their pros and cons
 
@@ -33,17 +33,17 @@ This is the solution for the [Hadoop Pig Laboratory at Eurecom](https://github.c
 - Pig Latin scripts are compiled into MapReduce jobs, and executed using Hadoop
 - Lazy execution model is applied: no processing is carried out when constructing the logical plans.
 - Steps:
-    -Step 1: Build the Logical Plan (the DAG graph): 
-	   + The Pig interpreter parses the commands (Parser)
-	   + Then it verifies validity of input files and bags (variables)
-	   + Pig builds a logical plan for every bag
-    - Step 2: Build the Physical Plan:
-	   + Compiler converts logical commands to MapReduce jobs
-	   + With optimizations
-    - Step 3: runs jobs on cluster
+    + Step 1: Build the Logical Plan (the DAG graph): 
+	   * The Pig interpreter parses the commands (Parser)
+	   * Then it verifies validity of input files and bags (variables)
+	   * Pig builds a logical plan for every bag
+    + Step 2: Build the Physical Plan:
+	   * Compiler converts logical commands to MapReduce jobs
+	   * With optimizations
+    + Step 3: runs jobs on cluster
 
 ###Exercise 2. Working with Online Social Networks data
-### Exercise 2.1. Counting the number of "friends" per Twitter user
+###Exercise 2.1. Counting the number of "friends" per Twitter user
 #####Script: scripts/warm-up/ex2
 
 #####Q1: Is the output sorted? Why?
@@ -124,6 +124,7 @@ MapReduce:
     + map: for each record, emmit 2 tuples: <client_ip, 1>, <server_ip, 1>
     + possibly with combiner
     + reduce: for each key, count(values)
+
 #####Q3:Elaborate on the differences between Ex.1 and Ex.1/b
 - Difference in the key to groupby
 - 1b: multiple query execution, pipe jobs
@@ -133,7 +134,7 @@ MapReduce:
 
 ###Exercise 2
 - Script: scripts/tstat/ex2.pig
-`filter $113 == "google.it"`
+- `filter $113 == "google.it"`
 
 ###Exercise 3
 - Script: scripts/tstat/ex3.pig
@@ -147,6 +148,7 @@ MapReduce:
 
 #####Q2: Where did you apply the TOP function?
 - used sort & limit
+
 #####Q3: Can you explain how does the TOP function work? 
 - sort desc then limit
 
